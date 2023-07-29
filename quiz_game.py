@@ -22,8 +22,8 @@ if answer == '4':
 else:
     print("Incorrect")
 
-answer = input("Who is the fastest man alive? ")
-if answer.lower() == 'usain bolt':
+answer = input("What is the most read book of all time? ")
+if answer.lower() == 'bible':
     print('You are correct!')
     score += 1
 else:
@@ -36,20 +36,20 @@ if answer.lower() == 'humans':
 else:
     print("Incorrect")
 
-answer = input("Who was the first president of the United States of America? ")
-if answer.lower() == 'george washington':
+answer = input("What year was America founded? ")
+if answer.lower() == '1776':
     print('You are correct!')
     score += 1
 else:
     print("Incorrect")
 
-answer = input("What is the most prominent self cultivation art in China? ")
-if answer.lower() == 'qigong':
+answer = input("What is the first name of the first computer programmer? ")
+if answer.lower() == 'ada':
     print('You are correct!')
-    score += 2
+    score += 3
 else:
     print("Incorrect")
 
 print(f'You got {score} correct this time around.')
-print(f'You scored {score/9 *100}%')
+print(f'You scored {score/10 *100}%')
 
