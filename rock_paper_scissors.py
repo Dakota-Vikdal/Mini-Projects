@@ -1,39 +1,56 @@
-# my_list = [char for char in 'hello']
+import random
 
-# print(my_list)
+user_wins = 0
+computer_wins = 0
 
-# my_list = []
+options = ['rock', 'paper', 'scissors']
 
-# for char in 'hello':
-#     my_list.append(char)
+while True:
+    user_input = input('Please enter either rock, paper, or scissors or Q to quit: ').lower()
+    if user_input == 'q':
+        break
 
-# print(my_list)
+    if user_input not in options:
+        continue
 
-#The two methods above serve the same function.
-#The top one is referred to as a list comprehension.
-#The bottom is referred to as a for loop.
+    random_number = random.randint(0, 2)
+    #0 = rock      #1 = paper       #2 = scissors
 
-# my_list2 = [num*2 for num in range(100)]
-# print(my_list2)
+    computer_pick = options[random_number]
+    print("Computer picked", computer_pick + '.')
 
-# my_list3 = [num*2 for num in range(100)
-#             if num % 2 == 0]
+    if user_input == "rock" and computer_pick == "scissors":
+        print('You won that one!')
+        user_wins += 1
+        
+    elif user_input == "paper" and computer_pick == "rock":
+        print('You won that one!')
+        user_wins += 1
+        
+    elif user_input == "scissors" and computer_pick == "paper":
+        print('You won that one!')
+        user_wins += 1
 
-# print(my_list3)
+    else:
+        print('Shoot, maybe next time.')
+        computer_wins += 1
+        
 
-#generate list of even numbers
-# my_list = []
 
-# for item in range(100):
-#     if item % 2 == 0:
-#         my_list.append(item)
+    if computer_pick == "rock" and user_input == "scissors":
+        print('Oh shoot, maybe next time!')
+        computer_wins += 1
+        continue
+    if computer_pick == "paper" and user_input == "rock":
+        print('Oh shoot, maybe next time!')
+        computer_wins += 1
+        continue
+    if computer_pick == "scissors" and user_input == "paper":
+        print('Oh shoot, maybe next time!')
+        computer_wins += 1
+        continue
+    
+print(f'You won {user_wins} times.')
+print('The computer scored', {computer_wins}, 'times.')
 
-# print(my_list)
-
-my_list = []
-
-for item in range(100):
-
-    my_list.append(item)
-
-print(my_list)
+print('Goodbye!')
