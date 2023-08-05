@@ -5,13 +5,13 @@ top_of_range = input("Type a number: ")
 if top_of_range.isdigit():
     top_of_range = int(top_of_range)
     if top_of_range <= 0:
-        print('You need to make your number larger')
+        print('Number must be between 1-10')
         quit()
     elif top_of_range > 10:
-        print('You need to make your number smaller')
+        print('Number must be between 1-10')
         quit()
 else:
-    print('Please make sure you input a number, mother fucker')
+    print('Please make sure you input a number')
 
 
 
