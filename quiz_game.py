@@ -30,7 +30,7 @@ else:
     print("Incorrect")
 
 answer = input("What has four legs in the morning, two in the afternoon and three in the evening? ")
-if answer.lower() == 'humans':
+if answer.lower() == 'humans' or 'human':
     print('You are correct!')
     score += 3
 else:
